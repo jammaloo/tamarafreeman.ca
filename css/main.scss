@@ -20,7 +20,7 @@ $text-color:       #FAFAFA;
 $nav-background-color: #FFFFFF;
 $background-color: #FAFAFA;
 
-$body_content_height: calc(100% - 76px);
+$body_content_height: calc(100vh - 76px);
 
 // Use media queries like this:
 // @include media-query($on-palm) {
@@ -35,9 +35,9 @@ $body_content_height: calc(100% - 76px);
     }
 }
 
-@mixin vertical-align($position: relative) {
+@mixin vertical-align($position: relative, $top: 50%) {
   position: $position;
-  top: 50%;
+  top: $top;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);

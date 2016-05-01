@@ -167,7 +167,32 @@ h1 {
 }
 
 #body_gallery {
+    #top-bg, #bottom-bg {
+        position: absolute;
+        background-image: linear-gradient(to top,rgba(0,0,0,.0001) 0,rgba(0,0,0,.5) 100%);
+        left: 0;
+        right: 0;
+    }
+    #top-bg {
+        background-image: linear-gradient(to top,rgba(0,0,0,.0001) 0,rgba(0,0,0,.5) 100%);
+        top: 0;
+        bottom: 50vh;
+    }
+    #bottom-bg {
+        background-image: linear-gradient(to bottom,rgba(0,0,0,.0001) 0,rgba(0,0,0,.5) 100%);
+        top: 50vh;
+        bottom: 0;
+    }
+
+
     #gallery {
-        height: $body_content_height;
+        @include vertical-align(relative, 45%);
+
+        .carousel-item {
+            img {
+                max-height: $body_content_height;
+                margin: 0 auto;
+            }
+        }
     }
 }
