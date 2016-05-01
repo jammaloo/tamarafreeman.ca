@@ -13,15 +13,11 @@ navorder: 4
 		<li data-target="#gallery" data-slide-to="2"></li>
 	</ol>
 	<div class="carousel-inner" role="listbox">
-		<div class="carousel-item active">
-			<img src="/img/index-header-bg.jpg" alt="First slide">
-		</div>
-		<div class="carousel-item">
-			<img src="/img/index-header-bg.jpg" alt="Second slide">
-		</div>
-		<div class="carousel-item">
-			<img src="/img/index-header-bg.jpg" alt="Third slide">
-		</div>
+		{% for i in (1..3) %}
+			<div class="carousel-item {% if i == 1 %}active{% endif %}">
+				<img src="/img/gallery/{{ i }}.jpg" alt="Slide {{ i }}">
+			</div>
+		{% endfor %}
 	</div>
 	<a class="left carousel-control" href="#gallery" role="button" data-slide="prev">
 		<span class="icon-prev" aria-hidden="true"></span>
