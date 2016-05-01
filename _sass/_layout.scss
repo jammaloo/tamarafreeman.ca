@@ -52,12 +52,17 @@ body {
     }
 
     .navbar-item {
+        text-transform: uppercase;
         margin-left: 5%;
         font-weight: lighter;
 
         &:hover {
             color: lighten($dark-text-color, 50%);
             transition: color 0.3s;
+        }
+
+        &.selected {
+            font-weight: normal;
         }
     }
 }

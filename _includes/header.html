@@ -6,12 +6,17 @@
       <div class="container-fluid">
         <a href="/" class="navbar-home"><span>TAMARA FREEMAN</span><span>ACTOR</span></a>
 
+
         <div class="navbar-item-container">
-          <a href="/about" class="navbar-item">ABOUT</a>
-          <a href="/demo" class="navbar-item">DEMO</a>
-          <a href="/resume" class="navbar-item">RESUME</a>
-          <a href="/gallery" class="navbar-item">GALLERY</a>
-          <a href="/contact" class="navbar-item">CONTACT</a>
+          {% for node in site.pages | sort:"navorder" %}
+            {% if node.group == "navigation" %}
+              {% if page.url == node.url %}
+                <a href="{{node.url}}" class="navbar-item selected">{{node.slug}}</a>
+              {% else %}
+                <a href="{{node.url}}" class="navbar-item">{{node.slug}}</a>
+              {% endif %}
+            {% endif %}
+          {% endfor %}
         </div>
 
       </div>
