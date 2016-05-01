@@ -19,19 +19,8 @@ $light-text-color:       #605E5E;
 $text-color:       #FAFAFA;
 $nav-background-color: #FFFFFF;
 $background-color: #FAFAFA;
-$brand-color:      #2a7ae2;
 
-$grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
-
-// Width of the content area
-$content-width:    800px;
-
-$on-palm:          600px;
-$on-laptop:        800px;
-
-
+$body_content_height: calc(100% - 76px);
 
 // Use media queries like this:
 // @include media-query($on-palm) {

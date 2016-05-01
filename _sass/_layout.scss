@@ -115,7 +115,7 @@ h1 {
 #body_about {
     .page-content {
 
-        height: calc(100% - 76px);
+        height: $body_content_height;
 
         .row {
             height: 100%;
@@ -158,5 +158,11 @@ h1 {
                 }
             }
         }
+    }
+}
+
+#body_gallery {
+    #gallery {
+        height: $body_content_height;
     }
 }
