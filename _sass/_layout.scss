@@ -5,14 +5,15 @@ html {
 body {
     height: 100%;
     font-family: $base-font-family;
+    background-color: $background-color;
 }
 
 .navbar {
     border-radius: 0;
     margin-bottom: 0;
     z-index: 1;
+    color: $dark-text-color;
     background-color: $nav-background-color;
-    color: $nav-text-color;
     height: 76px;
     text-align: center;
 
@@ -27,7 +28,7 @@ body {
     }
 
     a {
-        color: $nav-text-color;
+        color: $dark-text-color;
         text-decoration: none;
     }
 
@@ -55,17 +56,21 @@ body {
         font-weight: lighter;
 
         &:hover {
-            color: lighten($nav-text-color, 50%);
+            color: lighten($dark-text-color, 50%);
             transition: color 0.3s;
         }
     }
+}
+
+h1 {
+    font-family: 'eb garamond', serif;
 }
 
 .jumbotron {
     padding-top: 6rem;
     padding-bottom: 6rem;
     margin-bottom: 0;
-    background-color: $background-color;
+    background-color: #000000;
     color: $text-color;
     font-family: 'eb garamond', serif;
 }
@@ -85,30 +90,7 @@ body {
 .lead {
     line-height: 0.5;
     text-align: center;
-
-    span {
-        display: inline-block;
-        position: relative;
-        &:before, &:after {
-            content: "";
-            position: absolute;
-            height: 5px;
-            border-bottom: 1px solid $text-color;
-            border-top: 1px solid $text-color;
-            top: 35%;
-            width: 25px;
-        }
-
-        &:before {
-            right: 100%;
-            margin-right: 5px;
-        }
-
-        &:after {
-            left: 100%;
-            margin-left: 5px;
-        }
-    }
+    @include strikes($text-color, 35%);
 }
 
 #body_home {
@@ -126,6 +108,55 @@ body {
 
         .container {
             @include vertical-align();
+        }
+    }
+}
+
+#body_about {
+    .page-content {
+
+        height: calc(100% - 76px);
+
+        .row {
+            height: 100%;
+        }
+
+        .headshot {
+            background: linear-gradient(
+                            rgba(0, 0, 0, 0.2),
+                            rgba(0, 0, 0, 0.3)
+            ), url('/img/about-header.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100%;
+            @include media-query(767px) {
+                height: 50%;
+            }
+        }
+        .bio {
+            padding: 20px 60px;
+            color: $light-text-color;
+            height: 100%;
+
+            h1 {
+                @include strikes($dark-text-color);
+                color: $dark-text-color;
+                margin-bottom: 40px;
+                margin-top: 40px;
+            }
+
+            p {
+                font-weight: lighter;
+                font-size: 1.3rem;
+            }
+
+            @include media-query(767px) {
+                text-align: center;
+                padding-top: 0;
+                h1 {
+                    margin: 20px 0;
+                }
+            }
         }
     }
 }

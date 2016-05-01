@@ -14,10 +14,11 @@ $base-line-height: 1.5;
 
 $spacing-unit:     30px;
 
-$nav-text-color:       #3e3e3e;
-$text-color:       #ffffff;
-$nav-background-color: #ffffff;
-$background-color: #000000;
+$dark-text-color:       #3e3e3e;
+$light-text-color:       #605E5E;
+$text-color:       #FAFAFA;
+$nav-background-color: #FFFFFF;
+$background-color: #FAFAFA;
 $brand-color:      #2a7ae2;
 
 $grey-color:       #828282;
@@ -53,9 +54,35 @@ $on-laptop:        800px;
   transform: translateY(-50%);
 }
 
+@mixin strikes($color, $top: 50%) {
+  text-align: center;
+
+  span {
+    display: inline-block;
+    position: relative;
+    &:before, &:after {
+      content: "";
+      position: absolute;
+      height: 5px;
+      border-bottom: 1px solid $color;
+      border-top: 1px solid $color;
+      top: $top;
+      width: 25px;
+    }
+
+    &:before {
+      right: 100%;
+      margin-right: 5px;
+    }
+
+    &:after {
+      left: 100%;
+      margin-left: 5px;
+    }
+  }
+}
+
 
 
 // Import partials from `sass_dir` (defaults to `_sass`)
-@import
-        "layout"
-;
+@import "layout";
