@@ -35,7 +35,7 @@ body {
     .navbar-home {
         float: left;
 
-        @include media-query(920px) {
+        @include media-query(940px) {
             float: initial;
         }
         
@@ -46,15 +46,15 @@ body {
     }
 
     .navbar-item-container {
-        @include media-query(920px) {
+        @include media-query(940px) {
             clear: both;
         }
     }
 
     .navbar-item {
         text-transform: uppercase;
-        margin-left: 5%;
         font-weight: lighter;
+        margin: 0 2.5%;
 
         &:hover {
             color: lighten($dark-text-color, 50%);
