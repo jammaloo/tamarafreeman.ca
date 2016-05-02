@@ -173,6 +173,16 @@ h1 {
         .carousel-control {
             background: none;
             color: $dark-text-color;
+
+            span {
+                font-size: 4rem;
+                margin-top: -40px;
+
+                @include media-query(543px) {
+                    font-size: 2rem;
+                    margin-top: -18px;
+                }
+            }
         }
 
         .carousel-item {
