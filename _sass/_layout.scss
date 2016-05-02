@@ -65,6 +65,11 @@ body {
             font-weight: normal;
         }
     }
+
+    .social {
+        @include vertical-align(absolute);
+        right: 0;
+    }
 }
 
 h1 {
