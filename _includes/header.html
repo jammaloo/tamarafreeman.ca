@@ -8,7 +8,8 @@
 
 
         <div class="navbar-item-container">
-          {% for node in site.pages | sort:"navorder" %}
+          {% assign pages = site.pages | sort: 'navorder' %}
+          {% for node in pages %}
             {% if node.group == "navigation" %}
               {% if page.url == node.url %}
                 <a href="{{node.url}}" class="navbar-item selected">{{node.slug}}</a>

@@ -198,3 +198,52 @@ h1 {
         }
     }
 }
+
+#body_contact {
+    .page-content {
+
+        height: $body_content_height;
+
+        .row {
+            height: 100%;
+        }
+
+        .headshot {
+            background: linear-gradient(
+                            rgba(0, 0, 0, 0.2),
+                            rgba(0, 0, 0, 0.3)
+            ), url('/img/contact-header.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100%;
+            @include media-query(767px) {
+                height: 50%;
+            }
+        }
+        .contact {
+            padding: 20px 60px;
+            color: $light-text-color;
+
+            h1 {
+                @include strikes($dark-text-color);
+                color: $dark-text-color;
+                margin-bottom: 40px;
+                margin-top: 40px;
+            }
+
+            p {
+                font-weight: lighter;
+                font-size: 1.3rem;
+                margin: 0;
+            }
+
+            @include media-query(767px) {
+                text-align: center;
+                padding-top: 0;
+                h1 {
+                    margin: 20px 0;
+                }
+            }
+        }
+    }
+}
