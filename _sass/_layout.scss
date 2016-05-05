@@ -70,6 +70,7 @@ body {
         @include vertical-align(absolute);
         right: 0;
         font-size: 1.4rem;
+        color: $dark-text-color;
 
         &:hover {
             color: lighten($dark-text-color, 30%);
@@ -241,6 +242,16 @@ h1 {
                 font-weight: lighter;
                 font-size: 1.3rem;
                 margin: 0;
+            }
+
+            .social {
+                font-size: 1.4rem;
+                color: $dark-text-color;
+
+                &:hover {
+                    color: lighten($dark-text-color, 30%);
+                    transition: color 0.3s;
+                }
             }
 
             @include media-query(767px) {
