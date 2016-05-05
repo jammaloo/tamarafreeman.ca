@@ -69,6 +69,12 @@ body {
     .social {
         @include vertical-align(absolute);
         right: 0;
+        font-size: 1.4rem;
+
+        &:hover {
+            color: lighten($dark-text-color, 30%);
+            transition: color 0.3s;
+        }
     }
 }
 
@@ -269,21 +275,43 @@ h1 {
                 height: 50%;
             }
         }
-        .bio {
+        .resume {
             padding: 20px 60px;
             color: $light-text-color;
             height: 100%;
+            overflow-y: auto;
 
-            h1 {
-                @include strikes($dark-text-color);
-                color: $dark-text-color;
-                margin-bottom: 40px;
-                margin-top: 40px;
+
+
+            .resume-header {
+                position: relative;
+
+                .download {
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    font-size: 1.6rem;
+
+                    &:hover {
+                        color: lighten($link-color, 20%);
+                        transition: color 0.3s;
+                    }
+                }
+
+                h1 {
+                    @include strikes($dark-text-color);
+                    color: $dark-text-color;
+                    margin-bottom: 20px;
+                    margin-top: 20px;
+
+                    a {
+                        color: $dark-text-color;
+                    }
+                }
             }
 
-            p {
-                font-weight: lighter;
-                font-size: 1.3rem;
+            .resume-preview {
+                width: 100%;
             }
 
             @include media-query(767px) {
