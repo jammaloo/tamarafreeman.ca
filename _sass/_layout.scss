@@ -334,3 +334,23 @@ h1 {
         }
     }
 }
+
+#body_demo {
+
+    h1 {
+        @include strikes($dark-text-color);
+        color: $dark-text-color;
+        margin-bottom: 40px;
+        margin-top: 40px;
+    }
+
+    .video, .audio {
+        text-align: center;
+        margin-top: 60px;
+    }
+
+    .embed {
+        width: 100%;
+        max-width: 100%;
+    }
+}
