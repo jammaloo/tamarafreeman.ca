@@ -49,6 +49,10 @@ body {
         @include media-query(940px) {
             clear: both;
         }
+
+        @include media-query(320px) {
+            max-width: 280px;
+        }
     }
 
     .navbar-item {
