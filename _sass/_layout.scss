@@ -153,7 +153,7 @@ h1 {
         }
 
         .headshot {
-            @include faded-image('/img/about-header.jpg');
+            background: url('/img/about-header.jpg');
             background-size: cover;
             background-position: center;
             height: 100%;
@@ -227,7 +227,7 @@ h1 {
         }
 
         .headshot {
-            @include faded-image('/img/contact-header.jpg');
+            background: url('/img/contact-header.jpg');
             background-size: cover;
             background-position: center;
             height: 100%;
@@ -283,7 +283,7 @@ h1 {
         }
 
         .headshot {
-            @include faded-image('/img/resume-header.jpg');
+            background: url('/img/resume-header.jpg');
             background-size: cover;
             background-position: center;
             height: 100%;
@@ -370,7 +370,7 @@ h1 {
         }
 
         .headshot {
-            @include faded-image('/img/contact-header.jpg');
+            background: url('/img/upcoming-header.jpg');
             background-size: cover;
             background-position: center;
             height: 100%;
