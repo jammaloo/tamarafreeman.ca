@@ -72,7 +72,12 @@ $body_content_height: calc(100vh - 76px);
   }
 }
 
-
+@mixin faded-image($img) {
+  background: linear-gradient(
+                  rgba(0, 0, 0, 0.2),
+                  rgba(0, 0, 0, 0.3)
+  ), url($img);
+}
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import "layout";

@@ -126,7 +126,7 @@ h1 {
 
 #body_home {
     .page-content {
-        background-image: url('/img/index-header-bg.jpg');
+        @include faded-image('/img/index-header-bg.jpg');
         background-position: center;
         border-radius: 0;
         position: absolute;
@@ -153,10 +153,7 @@ h1 {
         }
 
         .headshot {
-            background: linear-gradient(
-                            rgba(0, 0, 0, 0.2),
-                            rgba(0, 0, 0, 0.3)
-            ), url('/img/about-header.jpg');
+            @include faded-image('/img/about-header.jpg');
             background-size: cover;
             background-position: center;
             height: 100%;
@@ -230,10 +227,7 @@ h1 {
         }
 
         .headshot {
-            background: linear-gradient(
-                            rgba(0, 0, 0, 0.2),
-                            rgba(0, 0, 0, 0.3)
-            ), url('/img/contact-header.jpg');
+            @include faded-image('/img/contact-header.jpg');
             background-size: cover;
             background-position: center;
             height: 100%;
@@ -289,10 +283,7 @@ h1 {
         }
 
         .headshot {
-            background: linear-gradient(
-                            rgba(0, 0, 0, 0.2),
-                            rgba(0, 0, 0, 0.3)
-            ), url('/img/resume-header.jpg');
+            @include faded-image('/img/resume-header.jpg');
             background-size: cover;
             background-position: center;
             height: 100%;
@@ -379,10 +370,7 @@ h1 {
         }
 
         .headshot {
-            background: linear-gradient(
-                            rgba(0, 0, 0, 0.2),
-                            rgba(0, 0, 0, 0.3)
-            ), url('/img/contact-header.jpg');
+            @include faded-image('/img/contact-header.jpg');
             background-size: cover;
             background-position: center;
             height: 100%;
