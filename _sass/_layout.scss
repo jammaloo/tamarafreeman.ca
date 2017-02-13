@@ -385,8 +385,8 @@ h1 {
             h1 {
                 @include strikes($dark-text-color);
                 color: $dark-text-color;
-                margin-bottom: 40px;
-                margin-top: 40px;
+                margin-bottom: 30px;
+                margin-top: 30px;
 
                 &.production {
                     font-size: 1.5em;
