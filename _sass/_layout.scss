@@ -155,7 +155,7 @@ h1 {
         .headshot {
             background: url('/img/about-header.jpg');
             background-size: cover;
-            background-position: center;
+            background-position: top;
             height: 100%;
             @include media-query(767px) {
                 height: 50%;
