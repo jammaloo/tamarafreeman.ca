@@ -10,9 +10,11 @@ navorder: 3
 		<li data-target="#gallery" data-slide-to="0" class="active"></li>
 		<li data-target="#gallery" data-slide-to="1"></li>
 		<li data-target="#gallery" data-slide-to="2"></li>
+		<li data-target="#gallery" data-slide-to="3"></li>
+		<li data-target="#gallery" data-slide-to="4"></li>
 	</ol>
 	<div class="carousel-inner" role="listbox">
-		{% for i in (1..3) %}
+		{% for i in (1..5) %}
 			<div class="carousel-item {% if i == 1 %}active{% endif %}">
 				<img src="/img/gallery/{{ i }}.jpg" alt="Slide {{ i }}">
 			</div>
