@@ -139,7 +139,7 @@ h1 {
         padding: 0;
 
         .container {
-            @include vertical-align(relative, 200px);
+            @include vertical-align(relative, 80vh);
         }
     }
 }
