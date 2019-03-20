@@ -72,10 +72,10 @@ $body_content_height: calc(100vh - 76px);
   }
 }
 
-@mixin faded-image($img) {
+@mixin faded-image($img, $start: 0.2, $stop: 0.3) {
   background: linear-gradient(
-                  rgba(0, 0, 0, 0.2),
-                  rgba(0, 0, 0, 0.3)
+                  rgba(0, 0, 0, $start),
+                  rgba(0, 0, 0, $stop)
   ), url($img);
 }
 

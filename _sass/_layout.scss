@@ -126,8 +126,9 @@ h1 {
 
 #body_home {
     .page-content {
-        @include faded-image('/img/index-header-bg.jpg');
-        background-position: center;
+        @include faded-image('/img/index-header-bg.jpg', 0, 0);
+        background-position-x: center;
+        background-repeat: no-repeat;
         border-radius: 0;
         position: absolute;
         top: 0;
@@ -138,7 +139,7 @@ h1 {
         padding: 0;
 
         .container {
-            @include vertical-align();
+            @include vertical-align(relative, 200px);
         }
     }
 }
