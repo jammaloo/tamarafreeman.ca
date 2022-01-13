@@ -151,16 +151,6 @@ a {
       @include vertical-align(relative, 80vh);
     }
   }
-
-  #covid_fundraiser {
-    position: absolute;
-    top: 76px;
-    background-color: black;
-    width: 100%;
-    text-align: center;
-    font-size: 25px;
-    padding: 10px;
-  }
 }
 
 #body_about {
