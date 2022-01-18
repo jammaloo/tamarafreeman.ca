@@ -357,9 +357,14 @@ a {
     margin-top: 40px;
   }
 
+  .demo-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
   .video, .audio {
     text-align: center;
-    margin-top: 60px;
+    margin: 30px;
   }
 
   .embed {
